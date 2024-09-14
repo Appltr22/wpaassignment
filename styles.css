@@ -1,0 +1,236 @@
+/* Importing the Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* Cool gradient header with shadows and subtle animation */
+header {
+    
+    background: linear-gradient(135deg, #ff002f, #e53656); /* Red gradient */
+    color: white;
+    padding: 30px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header h1 {
+    font-size: 2.8em;
+    margin: 0;
+    letter-spacing: 3px;
+    text-align: center;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    animation: textGlow 2s infinite alternate;
+}
+
+@keyframes textGlow {
+    0% {
+        text-shadow: 2px 2px 5px rgba(255, 0, 47, 0.6);
+    }
+    100% {
+        text-shadow: 4px 4px 10px rgba(255, 0, 47, 0.9);
+    }
+}
+
+/* Centered navigation bar using flexbox */
+/* Transparent navigation bar */
+nav {
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px 0;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Styles for the navigation list */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: inline-flex; /* Flexbox to display inline and center */
+    justify-content: center; /* Center the nav items */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden;
+}
+
+/* Styles for nav items */
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #333; /* Dark text color for contrast */
+    padding: 15px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 0, 47, 0.8); /* Semi-transparent red hover effect */
+    color: white;
+    transform: scale(1.05);
+}
+
+
+/* Main content with cool card-like sections */
+main {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 40px;
+}
+
+main section {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+main section:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+}
+
+
+h2 {
+    color: #b0002c;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(255, 0, 47, 0.5);
+}
+
+p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 1.15em;
+    text-align: justify;
+    letter-spacing: 0.5px;
+}
+
+
+button {
+    background-color: #ff002f;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #e53656;
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); 
+}
+
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    position: relative;
+    margin: 0;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    animation: glowUnderline 2s ease-in-out infinite alternate;
+}
+
+footer p:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    height: 3px;
+    background-color: #ff002f;
+    border-radius: 2px;
+    opacity: 0.7;
+}
+
+
+@keyframes glowUnderline {
+    0% {
+        text-shadow: 2px 2px 4px rgba(255, 0, 47, 0.5);
+    }
+    100% {
+        text-shadow: 4px 4px 10px rgba(255, 0, 47, 0.9);
+    }
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('fruits.gif'); /* Replace 'your-image.jpg' with the path to your image */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Keeps the background fixed during scrolling */
+    color: #333;
+}
+.music-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #00BFFF;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.music-btn:hover {
+    background-color: #007BFF;
+}
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator - Health Awareness</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>BMI Calculator</h1>
+        <p class="center-text">Guiding the Alpha Generation to lead healthier lives</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="health_info.html">Health Info</a></li>
+            <li><a href="bmi_calculator.html">BMI Calculator</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Calculate Your BMI</h2>
+            <p>Enter your height in centimeters and weight in kilograms:</p>
+            <form id="bmiForm">
+                <label for="height">Height (cm):</label>
+                <input type="number" id="height" required>
+
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" required>
+
+                <button type="button" onclick="calculateBMI()">Calculate BMI</button>
+            </form>
+            <p id="result"></p>
+        </section>
+
+        <section>
+            <h2>What is BMI?</h2>
+            <p>Body Mass Index (BMI) is a measure that uses your height and weight to estimate whether your weight is healthy. It is calculated using the following formula:</p>
+            <p><strong>BMI = Weight (kg) / Height (m)<sup>2</sup></strong></p>
+            <p>The result helps categorize individuals into different weight categories:</p>
+            <ul>
+                <li><strong>Underweight</strong>: BMI less than 18.5</li>
+                <li><strong>Normal weight</strong>: BMI between 18.5 and 24.9</li>
+                <li><strong>Overweight</strong>: BMI between 25 and 29.9</li>
+                <li><strong>Obesity</strong>: BMI of 30 or greater</li>
+            </ul>
+            <p>For example, if someone weighs 70 kg and their height is 1.75 meters, their BMI would be:</p>
+            <p><strong>BMI = 70 / (1.75 * 1.75) = 22.86</strong> (which falls into the "Normal weight" category).</p>
+            <p>While BMI is widely used, it has some limitations:</p>
+            <ul>
+                <li>It doesn't distinguish between weight from muscle and weight from fat.</li>
+                <li>It doesn't account for fat distribution or individual factors like age and gender.</li>
+            </ul>
+            <p>Despite these limitations, BMI is still a helpful screening tool for identifying potential weight-related health risks.</p>
+        </section>
+        
+        
+    </main>
+    <footer>
+        <p>&copy; ADAM ZUFAR BIN ATIKI BPJ231210265</p>
+    </footer>
+
+    <button id="playPauseBtn" class="music-btn">&#9658;</button> 
+    
+    <audio id="backgroundMusic" loop>
+        <source src="doublelife.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+</body>
+</html>
